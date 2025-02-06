@@ -1,0 +1,42 @@
+body{
+    background:rgb(184, 242, 240);
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.card{
+    background: whitesmoke;
+    border-radius: 50px;
+    display: inline-block;
+    height: 470px;
+    width: 375px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 90;
+    box-shadow:  2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-img {
+    width: 32px;  /* Adjust size */
+    height: 32px;
+    margin: 0 10px;
+}
+
+.img{
+    border-radius: 100%;
+    margin-top: 50px;
+    width: 52px;
+    height: 50px;
+    padding: 20px;
+}
+.btn{
+    background: rgb(184, 154, 238);
+    outline: none;
+    margin-top: 20px;
+    border: none;
+    height: 40px;
+    width: 30%;
+    border-radius: 25px;
+}
