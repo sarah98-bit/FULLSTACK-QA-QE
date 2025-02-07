@@ -1,0 +1,26 @@
+{
+	"dependencies": {
+		"nodemon": "^3.1.9"
+	},
+	"name": "fullstack-qa-qe",
+	"version": "1.0.0",
+	"description": "This project is a simple QR Code component built using **HTML** and **CSS**. It displays a QR code along with a brief description.",
+	"main": "index.js",
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "node string.js",
+		"dev:start": "nodemon string.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sarah98-bit/FULLSTACK-QA-QE.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/sarah98-bit/FULLSTACK-QA-QE/issues"
+	},
+	"homepage": "https://github.com/sarah98-bit/FULLSTACK-QA-QE#readme"
+}
