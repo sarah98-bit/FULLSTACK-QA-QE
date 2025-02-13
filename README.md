@@ -23,3 +23,8 @@ This project is a simple QR Code component built using **HTML** and **CSS**. It 
 ## Technologies used 
 HTML
 CSS
+![profile card](profilecard.png)
+
+![challenge2](challenge2.png)
+
+![productslist](products.png)

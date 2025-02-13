@@ -66,7 +66,12 @@ function verifyMFA(enteredMFA, actualMFA) {
 }
 function CheckBalance(withdrawalAmount, storedHashedBalance) {
     return bcrypt.compareSync(withdrawalAmount.toString(), storedHashedBalance);
+
 }
+function CheckDailyLimit(withdrawalAmount, storedHashedDailyLimit) {
+    return bcrypt.compareSync(withdrawalAmount.toString(), storedHashedDailyLimit);
+}
+
 function processWithdrawal(
     enteredPassword, storedHashedPassword,
     enteredMFA, actualMFA,
@@ -84,7 +89,7 @@ function processWithdrawal(
     if (!CheckBalance(withdrawalAmount, storedHashedBalance)) {
         return "Transaction Failed: Insufficient balance.";
     }
-    if (!checkDailyLimit(withdrawalAmount, storedHashedDailyLimit)) {
+    if (!CheckDailyLimit(withdrawalAmount, storedHashedDailyLimit)) {
         return "Transaction Failed: Amount exceeds daily limit.";
     }
 
@@ -97,12 +102,12 @@ const HashedPassword = bcrypt.hashSync(Password, 10);
 const actualMFA = "654321";
 const enteredMFA = "654321";
 
-const Balance = "5000";
+const Balance = "1000";
 const HashedBalance = bcrypt.hashSync(Balance, 10);
 
-const DailyLimit = "6000";
+const DailyLimit = "2000";
 const HashedDailyLimit = bcrypt.hashSync(DailyLimit, 10);
-console.log(processWithdrawal("secure123", HashedPassword, enteredMFA , actualMFA, 5000, HashedBalance, HashedDailyLimit)); // Transaction Successful.
+console.log(processWithdrawal("secure123", HashedPassword, enteredMFA , actualMFA, 1000, HashedBalance, HashedDailyLimit)); // Transaction Successful.
 console.log(processWithdrawal("wrongPass", HashedPassword, "654321", actualMFA, 1000, HashedBalance, HashedDailyLimit)); // Incorrect password.
 console.log(processWithdrawal("secure123", HashedPassword, "123456", actualMFA, 1000, HashedBalance, HashedDailyLimit)); // MFA failed.
 console.log(processWithdrawal("secure123", HashedPassword, "654321", actualMFA, 6000, HashedBalance, HashedDailyLimit)); // Insufficient balance.
