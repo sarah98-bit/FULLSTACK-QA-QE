@@ -1,26 +1,35 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    background-color: #070d12;
     padding: 20px;
-    }
-    .user-profile {
+}
+
+.user-profile {
     max-width: 500px;
     margin: auto;
     padding: 20px;
-    background: white;
+    background: rgb(244, 151, 216);
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    h1, h2 {
+}
+
+h1,
+h2 {
     color: #152A36;
-    }
-    ul {
+}
+
+ul {
     list-style: none;
     padding: 0;
-    }
-    li {
+}
+
+li {
     background: #f1f1f1;
     padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
-    }    
+}
+
+div {
+    display: block;
+}
