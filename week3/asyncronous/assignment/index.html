@@ -1,22 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header></header>
-    <main>
-        <section>
-            <h4>filter by</h4>
-            <li id="genre">Genre</li>
-            <li id="year">Year</li>
-            <h4>Sort by</h4>
-            <li id="pages">pages</li>
-            <li id="year">year</li>
-            <li id="genre">genre</li>
-        </section>
-    </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Search & Sorting System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+      <header>
+        <h1>📚 Book Search & Sorting System</h1>
+        <button id="cartButton" onclick="window.location.href='cart.html'">
+          🛒 View Cart
+        </button>
+      </header>
+
+      <div class="content">
+        <!-- Sidebar Controls -->
+        <aside class="sidebar">
+          <h2>🔍 Filters & Sorting</h2>
+
+          <!-- Filter Section -->
+          <label for="searchGenre">Genre:</label>
+          <select id="searchGenre">
+            <option value="">All Genres</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Dystopian">Dystopian</option>
+            <option value="Romance">Romance</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Historical Fiction">Historical Fiction</option>
+            <option value="Epic Poetry">Epic Poetry</option>
+          </select>
+
+          <label for="searchYear">Min Year:</label>
+          <input type="number" id="searchYear" placeholder="Enter Year" />
+
+          <label for="searchPages">Min Pages:</label>
+          <input type="number" id="searchPages" placeholder="Enter Pages" />
+
+          <button onclick="applyFilters()">🔍 Search</button>
+
+          <!-- Sorting Section -->
+          <h3>📊 Sort By:</h3>
+          <select id="sortBy">
+            <option value="year">Year</option>
+            <option value="pages">Pages</option>
+          </select>
+          <select id="order">
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+          </select>
+          <button onclick="sortBooks()">🔃 Sort</button>
+        </aside>
+
+        <!-- Main Content: Books -->
+        <main>
+          <div id="bookList"></div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <p id="modalMessage"></p>
+        <button onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
 </html>

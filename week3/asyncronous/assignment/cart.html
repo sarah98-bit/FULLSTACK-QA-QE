@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🛒 Your Cart</h1>
+      <button onclick="window.location.href='index.html'">⬅️ Back to Books</button>
+
+      <div id="cartList"></div>
+
+      <button class="buy-button" onclick="buyBooks()">💳 Buy Now</button>
+    </div>
+
+    <script>
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      function displayCart() {
+        const cartContainer = document.getElementById("cartList");
+        cartContainer.innerHTML = "";
+
+        if (cart.length === 0) {
+          cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+          return;
+        }
+
+        let total = 0;
+        cart.forEach(book => {
+          total += parseFloat(book.price);
+
+          const cartItem = document.createElement("div");
+          cartItem.classList.add("cart-item");
+
+          cartItem.innerHTML = `
+            <p>${book.title} - $${book.price}</p>
+            <button onclick="removeFromCart(${book.id})">❌ Remove</button>
+          `;
+
+          cartContainer.appendChild(cartItem);
+        });
+
+        const totalElement = document.createElement("p");
+        totalElement.innerHTML = `<strong>Total: $${total.toFixed(2)}</strong>`;
+        cartContainer.appendChild(totalElement);
+      }
+
+      function removeFromCart(bookId) {
+        cart = cart.filter(book => book.id !== bookId);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        displayCart();
+      }
+
+      function buyBooks() {
+        if (cart.length === 0) {
+          alert("Your cart is empty!");
+          return;
+        }
+
+        let total = cart.reduce((sum, book) => sum + parseFloat(book.price), 0);
+        alert(`Thank you for your purchase! You spent $${total.toFixed(2)}.`);
+
+        cart = [];
+        localStorage.setItem("cart", JSON.stringify(cart));
+        displayCart();
+      }
+
+      displayCart();
+    </script>
+  </body>
+</html>
