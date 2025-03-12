@@ -1,0 +1,125 @@
+{
+    "cars": [
+      {
+        "id": 1,
+        "make": "Toyota",
+        "model": "Corolla",
+        "model_year": 2022,
+        "price": 25000,
+        "fuel_type": "Petrol",
+        "transmission": "Automatic",
+        "color": "White",
+        "mileage": 15000,
+        "image": "https://content.homenetiol.com/2000292/2215152/0x0/df6ea1aae1294b82b5242ffda8473a3b.jpg"
+      },
+      {
+        "id": 2,
+        "make": "Honda",
+        "model": "Civic",
+        "model_year": 2021,
+        "price": 23000,
+        "fuel_type": "Petrol",
+        "transmission": "Manual",
+        "color": "Black",
+        "mileage": 20000,
+        "image": "https://vehicle-images.dealerinspire.com/f803-110008857/2HGFC2F89MH515981/05f3929d8178cb6fe0872ee3b20dbc0b.jpg"
+      },
+      {
+        "id": 3,
+        "make": "Ford",
+        "model": "Focus",
+        "model_year": 2020,
+        "price": 20000,
+        "fuel_type": "Diesel",
+        "transmission": "Automatic",
+        "color": "Blue",
+        "mileage": 30000,
+        "image": "https://media.drive.com.au/obj/tx_q:70,rs:auto:960:540:1/caradvice/private/514c9401b901aa09407a9670aa57b5f1"
+      },
+      {
+        "id": 4,
+        "make": "Tesla",
+        "model": "Model 3",
+        "model_year": 2023,
+        "price": 40000,
+        "fuel_type": "Electric",
+        "transmission": "Automatic",
+        "color": "Red",
+        "mileage": 5000,
+        "image": "https://hips.hearstapps.com/hmg-prod/images/2023-tesla-model-3-101-1671468297.jpeg?crop=0.575xw:0.575xh;0.324xw,0.214xh&resize=1200:*"
+      },
+      {
+        "id": 5,
+        "make": "BMW",
+        "model": "X5",
+        "model_year": 2019,
+        "price": 45000,
+        "fuel_type": "Hybrid",
+        "transmission": "Automatic",
+        "color": "Silver",
+        "mileage": 35000,
+        "image": "https://di-uploads-pod25.dealerinspire.com/bmwtoronto/uploads/2019/12/The-All-New-2019-BMW-X5_1-1024x546.jpg"
+      },
+      {
+        "id": 6,
+        "make": "Mercedes",
+        "model": "C-Class",
+        "model_year": 2022,
+        "price": 50000,
+        "fuel_type": "Petrol",
+        "transmission": "Automatic",
+        "color": "Gray",
+        "mileage": 12000,
+        "image": "https://img.autotrader.co.za/13876194"
+      },
+      {
+        "id": 7,
+        "make": "Chevrolet",
+        "model": "Malibu",
+        "model_year": 2021,
+        "price": 28000,
+        "fuel_type": "Petrol",
+        "transmission": "Automatic",
+        "color": "White",
+        "mileage": 18000,
+        "image": "https://file.kelleybluebookimages.com/kbb/base/evox/CP/13153/2021-Chevrolet-Malibu-front_13153_032_1815x736_GAZ_cropped.png?downsize=750:*"
+      },
+      {
+        "id": 8,
+        "make": "Nissan",
+        "model": "Altima",
+        "model_year": 2020,
+        "price": 22000,
+        "fuel_type": "Petrol",
+        "transmission": "Automatic",
+        "color": "Black",
+        "mileage": 25000,
+        "image": "https://img.autobytel.com/chrome/colormatched_01/white/640/cc_2020nic04_01_640/cc_2020nic040058_01_640_kh3.jpg"
+      },
+      {
+        "id": 9,
+        "make": "Hyundai",
+        "model": "Elantra",
+        "model_year": 2019,
+        "price": 19000,
+        "fuel_type": "Petrol",
+        "transmission": "Manual",
+        "color": "Blue",
+        "mileage": 32000,
+        "image": "https://blog.consumerguide.com/wp-content/uploads/sites/2/2019/11/Screen-Shot-2019-11-12-at-1.57.17-PM-1110x577.png"
+      },
+      {
+        "id": 10,
+        "make": "Audi",
+        "model": "A4",
+        "model_year": 2023,
+        "price": 55000,
+        "fuel_type": "Petrol",
+        "transmission": "Automatic",
+        "color": "Silver",
+        "mileage": 8000,
+        "image": "https://pictures.dealer.com/a/audirichmondbc/1127/bf64c5d28e8f82f55058067830586c3fx.jpg?impolicy=resize&w=1024"
+      }
+    ]
+  }
+  

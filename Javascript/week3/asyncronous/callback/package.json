@@ -1,0 +1,21 @@
+{
+  "name": "week3",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon script.js",
+    "dev:start": "node script.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^3.0.1",
+    "chalk": "^5.4.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.9",
+    "uuid": "^11.0.5"
+  }
+}
